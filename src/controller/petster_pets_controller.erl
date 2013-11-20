@@ -9,6 +9,7 @@ create('POST', []) ->
   Name = Request:param("name"),
   Species = Request:param("species"),
 
-  pet:create(id, Name, Species),
+  Pet = pet:new(id, Name, Species),
+  Pet:save(),
 
   {redirect, "/"}.
