@@ -1,0 +1,13 @@
+{% extends "app.html" %}
+{% block content %}
+<form action="{% url action="create" %}" method="post">
+
+  <input name="name" placeholder="Name" />
+  <select name="species">
+    <option value="dog">Dog</option>
+    <option value="cat">Cat</option>
+    <option value="wolf">Wolf</option>
+  </select>
+  <input type="submit" />
+</form>
+{% endblock %}

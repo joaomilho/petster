@@ -1,0 +1,21 @@
+{% extends "app.html" %}
+{% block content %}
+<a href="{% url action="new" %}">
+  New
+</a>
+
+<table id="pets">
+  {% for pet in pets %}
+    <tr>
+      <td>{{ pet.name }}</td>
+      <td>{{ pet.species }}</td>
+      <td>
+        <a href="{% url action="edit" id=pet.id %}">
+          Edit
+        </a>
+      </td>
+
+    </tr>
+  {% endfor %}
+</ul>
+{% endblock %}

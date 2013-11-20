@@ -1,0 +1,2 @@
+-module(pet, [Id, Name, Species]).
+-compile(export_all).
